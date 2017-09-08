@@ -24,7 +24,7 @@ class App {
     let router = express.Router()
     router.get('/', (req, res, next) => {
       res.json({
-        message: 'Hello World!'
+        message: 'RESTful API /api/v1/monsters'
       })
     })
     this.app.use('/', router)
