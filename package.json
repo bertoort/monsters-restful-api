@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'"
+    "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*.test.ts'",
+    "migrate": "knex migrate:latest --cwd ./dist"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +29,10 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "debug": "^3.0.1",
+    "dotenv": "^4.0.0",
     "express": "^4.15.4",
-    "morgan": "^1.8.2"
+    "knex": "^0.13.0",
+    "morgan": "^1.8.2",
+    "pg": "^7.3.0"
   }
 }
